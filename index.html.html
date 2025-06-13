@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maaf untuk Diah 🌸</title>
+  <style>
+    body {
+      background-color: #ffe6f0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      color: #cc3366;
+      text-align: center;
+      padding: 50px;
+    }
+
+    .container {
+      background-color: #fff0f5;
+      border: 3px dashed #ff99cc;
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 600px;
+      margin: 0 auto;
+      box-shadow: 0 0 10px #ffb6c1;
+    }
+
+    .btn {
+      background-color: #ff99cc;
+      color: white;
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .btn:hover {
+      background-color: #ff66b2;
+    }
+
+    .flowers {
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="pesan">
+      <p>Hai Diah, aku minta maaf ya perihal semalam...<br />
+      Maaf aku ga jujur dari awal, aku ga bermaksud ngebohongin kamu dan ga bermaksud jahat begitu.</p>
+      <p>
+        Aku sadar aku udah ngecewain kamu, Diah. Kebohongan itu ngga seharusnya aku lakukan.<br />
+        Aku bener-bener minta maaf, dan kalau kamu bersedia, aku ingin memperbaiki semuanya dan belajar lebih jujur ke depannya.
+      </p>
+      <p><strong>Apakah kamu maafin Rafa?</strong></p>
+      <button class="btn" onclick="maafkan()">Maafin</button>
+      <button class="btn" onclick="nggakMaafin()">Nggak Maafin</button>
+    </div>
+    <div id="respon" style="display: none;"></div>
+  </div>
+
+  <script>
+    function maafkan() {
+      document.getElementById("pesan").innerHTML = `
+        <p><strong>Terima kasih Diaaaaahhhhh 🌸🌸🌸</strong></p>
+        <p>Nanti aku call yaaaaw 😘💕</p>
+      `;
+    }
+
+    function nggakMaafin() {
+      const respon = document.getElementById("respon");
+      respon.style.display = "block";
+      respon.innerHTML = `
+        <p>Oke... aku ngerti kamu belum bisa maafin aku sekarang 😢</p>
+        <p><strong>Tapi... apakah kamu YAKIN nggak mau maafin Rafa?</strong></p>
+        <button class="btn" onclick="maafkan()">Oke aku maafin tapi jangan diulangi ya</button>
+        <button class="btn" onclick="ulangLagi()">Nggak aku nggak mau maafin kamu selamanya</button>
+      `;
+    }
+
+    function ulangLagi() {
+      const respon = document.getElementById("respon");
+      respon.style.display = "none";
+      document.getElementById("pesan").innerHTML = `
+        <p>Hai Diah, aku minta maaf ya perihal semalam...<br />
+        Maaf aku ga jujur dari awal, aku ga bermaksud ngebohongin kamu dan ga bermaksud jahat begitu.</p>
+        <p>
+          Aku sadar aku udah ngecewain kamu, Diah. Kebohongan itu ngga seharusnya aku lakukan.<br />
+          Aku bener-bener minta maaf, dan kalau kamu bersedia, aku ingin memperbaiki semuanya dan belajar lebih jujur ke depannya.
+        </p>
+        <p><strong>Apakah kamu maafin Rafa?</strong></p>
+        <button class="btn" onclick="maafkan()">Maafin</button>
+        <button class="btn" onclick="nggakMaafin()">Nggak Maafin</button>
+      `;
+    }
+  </script>
+</body>
+</html>
